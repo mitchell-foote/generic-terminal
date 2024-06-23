@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React from 'react'
 import { ReactorManagementStartingConfigurationProps, ReactorManagementWrapped, generateStartingState } from './reactor-management/wrapped';
 import { GameConfig, GameSignature } from './types';
 

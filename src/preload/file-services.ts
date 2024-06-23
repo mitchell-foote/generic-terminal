@@ -44,19 +44,22 @@ export const loadConfigFile = async (relativeFilePathUrl: string, fileName: stri
 export const loadConfigDirectory = async (relativeFilepathUrl: string) => {
     try {
         const files = fs.readdirSync(getRelativePathway() + relativeFilepathUrl);
-        if (files) {
+        if (files.length > 0) {
             const textValues = files.map((each) => {
-                return fs.readFileSync(each, 'utf-8')
+                return fs.readFileSync(getRelativePathway() + relativeFilepathUrl + "/" + each, 'utf-8')
             });
+
             return textValues;
         }
         else {
+            console.log("No files found");
             fs.mkdirSync(getRelativePathway(), { recursive: true });
             fs.mkdirSync(getRelativePathway() + relativeFilepathUrl, { recursive: true });
             return []
         }
     }
     catch (e) {
+        console.log("Error: ", e);
         fs.mkdirSync(getRelativePathway(), { recursive: true });
         fs.mkdirSync(getRelativePathway() + relativeFilepathUrl, { recursive: true });
         return []
