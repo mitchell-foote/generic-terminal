@@ -13,9 +13,17 @@ export const ReactorManagement: GameSignature = {
             return []
         }
         else {
-            return fileStringArray.map((fileString) => {
-                return JSON.parse(fileString)
-            })
+            let files = fileStringArray.map((fileString) => {
+                try {
+                    return JSON.parse(fileString)
+                }
+                catch {
+                    return {};
+                }
+
+            });
+            files = files.filter((file) => file.id);
+            return files;
         }
     },
     noGameVersions: async () => {

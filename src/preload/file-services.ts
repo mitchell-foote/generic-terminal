@@ -48,7 +48,6 @@ export const loadConfigDirectory = async (relativeFilepathUrl: string) => {
             const textValues = files.map((each) => {
                 return fs.readFileSync(getRelativePathway() + relativeFilepathUrl + "/" + each, 'utf-8')
             });
-
             return textValues;
         }
         else {

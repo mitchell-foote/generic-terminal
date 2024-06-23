@@ -34,12 +34,30 @@ export const Home: React.FC<HomeProps> = (props) => {
         setSelectedGameSignatureConfig(gameSignature);
     }
     if (!selectedGameSignatureConfig) {
-        return <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        return <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: "oldlace" }}>
             <h1>Welcome to the terminal games!</h1>
             <p>Choose a game to play</p>
             {Object.values(Games).map((game) => (
                 <button key={game.id} onClick={() => selectGameSignature(game)}>{game.displayName}</button>
             ))}
+            <div style={{ marginTop: '2rem' }}>Important key-combos</div>
+            <div>
+                <code>Command Or Control + Alt + K </code>
+                <span>Toggles Kiosk Mode</span>
+            </div>
+            <div>
+                <code>Command Or Control + Alt + I </code>
+                <span>Opens Dev Tools</span>
+            </div>
+            <div>
+                <code>Command Or Control + Alt + R </code>
+                <span>Restarts the application</span>
+            </div>
+            <div>
+                <code>Command Or Control + Alt + Q </code>
+                <span>Close the App window</span>
+            </div>
+
         </div>
     }
     else if (availableGameConfigs) {
