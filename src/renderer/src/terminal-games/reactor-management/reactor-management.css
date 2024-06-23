@@ -1,0 +1,46 @@
+.terminal-grid-parent {
+    display: grid;
+    width: calc(100vw - 10rem);
+    height: calc(100vh - 10rem);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1.5fr;
+    grid-gap: 10px;
+    grid-template-areas: 'terminal image' 'terminal image';
+}
+
+.terminal {
+    grid-area: terminal;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    z-index: 1
+}
+
+.image {
+    background-color: #000000;
+    grid-area: image;
+    border-radius: 10px;
+    border: 2px solid limegreen;
+    color: limegreen;
+    position: relative;
+}
+
+.matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    color: limegreen;
+
+}
+
+.all-yellow * {
+    color: #eff843 !important;
+    border-color: #eff843 !important;
+}
+
+.all-red * {
+    color: #ff1d3e !important;
+    border-color: #ff1d3e !important;
+}
