@@ -1,6 +1,6 @@
 {
   "name": "generic-terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An interface to place terminal-esque games in a web/electron environment",
   "main": "./out/main/index.js",
   "author": "Mitchell Foote (mitchellfoote93@gmail.com)",
