@@ -39,7 +39,7 @@ export class ReactorManagementTakedownGame extends React.Component<ReactorManage
         else {
             this.props.clearLines(() => {
                 this.props.addLine(["Shield Generator Access v3.0"], () => {
-                    this.props.writeText({ message: "Access terminal initiating, loading shield profile..." }, () => {
+                    this.props.writeText({ message: "Access terminal initiating, loading shield profile... Find the correct placement of the levers below to cause a shield breakdown." }, () => {
                         this.props.writeText({ message: "Type 'help' to gain access to command list." }, () => {
                             this.goToCommandLine();
                         })

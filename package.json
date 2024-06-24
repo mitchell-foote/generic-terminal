@@ -1,7 +1,7 @@
 {
   "name": "generic-terminal",
   "version": "1.0.0",
-  "description": "An interface to place terminal-esque games in a web browser",
+  "description": "An interface to place terminal-esque games in a web/electron environment",
   "main": "./out/main/index.js",
   "author": "Mitchell Foote (mitchellfoote93@gmail.com)",
   "homepage": "https://github.com/mitchell-foote/generic-terminal",
