@@ -128,7 +128,7 @@ export class ReactorManagementTakedownGame extends React.Component<ReactorManage
             "clear - Clears the terminal. Ex: '> clear'",
             "set_up - Sets the lever to the up position. Ex: '> set_up <lever name>'",
             "set_down - Sets the lever to the down position. Ex: '> set_down <lever name>'",
-            "set_middle - Sets the lever to the down position. Ex:'> set_middle <lever name>'",
+            "set_middle - Sets the lever to the middle position. Ex:'> set_middle <lever name>'",
             "pulse - Sends an energy pulse through the shielding system. Ex: '> pulse'"
         ], () => {
             this.goToCommandLine()
