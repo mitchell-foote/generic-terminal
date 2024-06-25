@@ -319,7 +319,7 @@ export class ReactorManagementWrapped extends React.Component<ReactorManagementS
                     startingComponent={ReactorManagementGame}
                 />
             </div>
-            <div className='image'>
+            <div style={{ overflow: "hidden" }} className='image'>
                 <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around' }}>
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 'x-large', flexDirection: 'column' }}>
                         {this.isOverloadGame() && this.generateOverloadHeaderTxt()}
